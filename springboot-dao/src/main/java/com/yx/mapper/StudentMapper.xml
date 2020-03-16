@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yx.mapper.dao.StudentMapper">
+
+	<insert id="insert" parameterType="Student">
+		insert into student values(#{stuNo},#{stuName},#{stuAge})
+	</insert>
+	
+	<delete id="delete" parameterType="Student">
+		delete from student where stuno = #{stuNo}
+	</delete>
+	
+	<select id="select" resultType="Student">
+		select * from student
+	</select>
+	
+</mapper>
